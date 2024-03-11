@@ -1,0 +1,26 @@
+<head>
+    <style>
+        .logos {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<div class="logos">
+    {{ $image := resources.Get "images/scuderia.png" }}
+    {{ $image := $image.Resize "600x" }}
+    <img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}">
+    {{ $mcl := resources.Get "images/mclprawn.png" }}
+    {{ $mcl := $mcl.Resize "600x" }}
+    <img src="{{ $mcl.RelPermalink }}" width="{{ $mcl.Width }}" height="{{ $mcl.Height }}">
+    {{ $pgp := resources.Get "images/PGP_1.png" }}
+    {{ $pgp := $pgp.Resize "600x" }}
+    <img src="{{ $pgp.RelPermalink }}" width="{{ $pgp.Width }}" height="{{ $pgp.Height }}">
+    {{ $champ := resources.Get "images/PRACTICECHAMP.png" }}
+    {{ $champ := $champ.Resize "600x" }}
+    <img src="{{ $champ.RelPermalink }}" width="{{ $champ.Width }}" height="{{ $champ.Height }}">
+</div>
