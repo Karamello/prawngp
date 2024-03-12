@@ -1,4 +1,7 @@
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap" rel="stylesheet">
     <style>
         .logos {
             display: flex;
@@ -7,10 +10,25 @@
             align-items: center;
             justify-content: center;
         }
+
+        .logos img {
+            padding-top: 10px;
+        }
+
+        h1 {
+            font-family: "Montserrat", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 900;
+            font-style: italic;
+        }
+
+
+        
     </style>
 </head>
 
 <div class="logos">
+    <h1>A.I Motorsports Family</h1>
     {{ $image := resources.Get "images/scuderia.png" }}
     {{ $image := $image.Resize "600x" }}
     <img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}">
