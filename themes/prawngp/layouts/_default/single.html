@@ -1,7 +1,11 @@
 {{ define "main" }}
+<div class="single-header">
   <h1>{{ .Title }}</h1>
 
-
-  {{ .Content }}
-  {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+  {{ $img := resources.Get .Params.image}}
+  {{ $img := $img.Resize "400x" }}
+  <img src="{{ $img.RelPermalink }}" />
+</div>
+{{ .Content }}
+{{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
 {{ end }}
