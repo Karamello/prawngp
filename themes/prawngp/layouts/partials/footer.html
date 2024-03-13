@@ -1,0 +1,4 @@
+<p>Copyright {{ now.Year }}. All rights reserved.</p>
+{{ $img := resources.Get "images/PRACTICECHAMP.png"}}
+{{ $img := $img.Resize "100x"}}
+<img src="{{ $img.RelPermalink }}" />

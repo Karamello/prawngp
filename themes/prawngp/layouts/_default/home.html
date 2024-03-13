@@ -1,0 +1,15 @@
+{{ define "main" }}
+{{ .Content }}
+
+<div class="team-listing-container">
+  {{ range site.RegularPages }}
+  <div class="team-item">
+    {{ $img := resources.Get .Params.image}}
+    {{ $img := $img.Resize "300x" }}
+    <a href="{{ .RelPermalink }}"><img src="{{ $img.RelPermalink }}" /></a>
+    <span>{{ .Summary }}</span>
+  </div>
+  {{ end }}
+</div>
+
+{{ end }}
